@@ -5,9 +5,24 @@ body{
   margin:40px auto;max-width:400px;background:#fff;padding:40px;
   border-radius:20px;box-shadow:0 6px 36px rgba(0,0,0,.08);text-align:center;
 }
+h1{
+  font-size:1.6rem;
+  margin-bottom:20px;
+  color:#333;
+}
 input{
   width:90%;padding:12px 14px;border:1px solid #ddd;border-radius:8px;
   margin:10px 0;font-size:1rem;
+}
+
+/* make all auth forms share the same stacked layout */
+#kc-form-login,
+#kc-register-form,
+#kc-update-password-form,
+#kc-forgot-password-form{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 .button-login{
   width:100%;padding:12px 0;border:none;border-radius:8px;
