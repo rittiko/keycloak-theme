@@ -1,0 +1,13 @@
+services:
+  keycloak:
+    image: keycloak/keycloak:25.0.4          # เวอร์ชันล่าสุดบน Docker Hub :contentReference[oaicite:1]{index=1}
+    command: ["start-dev"]
+    environment:
+      KEYCLOAK_ADMIN: admin                  # user & pass เริ่มต้น
+      KEYCLOAK_ADMIN_PASSWORD: admin123
+    ports:
+      - "8080:8080"                          # เปิดเว็บบน localhost:8080
+    volumes:
+      # map โฟลเดอร์ธีมเข้าไปอ่านอย่างเดียว (แก้ไฟล์ที่เครื่องก็รีเฟรชได้ทันที)
+      - ./mytheme:/opt/keycloak/themes/mytheme:ro
+
