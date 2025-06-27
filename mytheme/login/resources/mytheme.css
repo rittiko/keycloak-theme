@@ -19,7 +19,8 @@ input{
 #kc-form-login,
 #kc-register-form,
 #kc-update-password-form,
-#kc-forgot-password-form{
+#kc-forgot-password-form,
+#kc-update-account-form{
   display:flex;
   flex-direction:column;
   align-items:center;
